@@ -1,0 +1,233 @@
+/* Basic page layout */
+
+:root {
+  --accent: #004f9f;
+  --text-main: #222222;
+  --text-muted: #666666;
+  --bg: #fdfdfd;
+  --border: #dddddd;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: "Latin Modern Roman", "Computer Modern Roman",
+               "Palatino Linotype", "Book Antiqua", Palatino,
+               "Times New Roman", Times, serif;
+  line-height: 1.6;
+}
+
+/* Accessibility: skip link */
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  font-size: 0.875rem;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+}
+
+/* Main container */
+
+.page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem 1.25rem;
+}
+
+/* Header & navigation */
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.tagline {
+  margin: 0.2rem 0 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.affiliation {
+  margin: 0.1rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  border-bottom-color: var(--accent);
+}
+
+/* Headings & section spacing */
+
+main {
+  margin-top: 1.5rem;
+}
+
+section {
+  margin-top: 1.5rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.15rem;
+}
+
+h3 {
+  font-size: 0.98rem;
+  margin: 0.75rem 0 0.25rem;
+}
+
+/* Typography */
+
+p {
+  margin: 0.25rem 0 0.75rem;
+}
+
+ul {
+  margin: 0.25rem 0 0.75rem 1.1rem;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* Publications */
+
+.pub-list {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.pub-list li {
+  margin-bottom: 0.85rem;
+}
+
+.pub-title {
+  font-weight: 600;
+}
+
+.pub-authors,
+.pub-venue,
+.pub-links {
+  font-size: 0.9rem;
+}
+
+.pub-venue {
+  color: var(--text-muted);
+}
+
+.pub-links a {
+  text-decoration: none;
+}
+
+.pub-links a:hover,
+.pub-links a:focus {
+  text-decoration: underline;
+}
+
+/* Notes & meta text */
+
+.note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Contact section */
+
+.contact-line {
+  margin: 0.15rem 0;
+}
+
+.contact-label {
+  font-weight: 600;
+  margin-right: 0.3rem;
+}
+
+.email-obfuscated {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+  padding-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 640px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .site-nav {
+    margin-top: 0.25rem;
+  }
+}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" data-color-scheme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="color-scheme" content="dark light">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Upcoming blogposts by Adam Hazimeh on jailbreak detection, semantic document derendering, and task arithmetic.">
+    <title>Blogposts — Adam Hazimeh</title>
+    <link rel="icon" href="data:,">
+    <script src="appearance.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div class="page">
+      <header class="site-header">
+        <a class="name" href="index.html">Adam Hazimeh</a>
+        <div class="header-actions">
+          <nav class="site-nav" aria-label="Main navigation">
+            <a href="index.html#about">About</a>
+            <a href="blog.html" aria-current="page">Blogposts</a>
+            <a href="index.html#publications">Research</a>
+            <a href="index.html#contact">Contact</a>
+          </nav>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" aria-pressed="false" hidden>
+            <svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3">
+              <circle cx="10" cy="10" r="3.4" />
+              <path d="M10 1.5V4M10 16V18.5M1.5 10H4M16 10H18.5M4 4L5.8 5.8M14.2 14.2L16 16M4 16L5.8 14.2M14.2 5.8L16 4" />
+            </svg>
+            <span data-theme-label>Light mode</span>
+          </button>
+        </div>
+      </header>
+      <main id="main">
+        <header class="writing-hero">
+          <h1>Blogposts</h1>
+        </header>
+        <section aria-label="Upcoming blogposts">
+          <ul class="post-list blog-posts">
+            <li class="post">
+              <div class="post-illustration" data-topic="alignment">
+                <img class="theme-image-light" src="illustrations/jailbreak-detection.svg" width="500" height="340" alt="A prompt and masked response tokens lead to inspection of internal model states before decoding." loading="lazy">
+                <img class="theme-image-dark" src="illustrations/jailbreak-detection-dark.svg" width="500" height="340" alt="A prompt and masked response tokens lead to inspection of internal model states before decoding." loading="lazy">
+              </div>
+              <h2 class="post-title">Before the First Token: Detecting Jailbreaks in Masked Diffusion LMs</h2>
+            </li>
+            <li class="post">
+              <div class="post-illustration" data-topic="derendering">
+                <img class="theme-image-light" src="illustrations/derendering.svg" width="500" height="340" alt="A document image reconstructed as editable vector shapes." loading="lazy">
+                <img class="theme-image-dark" src="illustrations/derendering-dark.svg" width="500" height="340" alt="A document image reconstructed as editable vector shapes." loading="lazy">
+              </div>
+              <h2 class="post-title">Undoing the Screenshot: Making Slides Editable Again</h2>
+            </li>
+            <li class="post">
+              <div class="post-illustration" data-topic="merging">
+                <img class="theme-image-light" src="illustrations/task-arithmetic.svg" width="500" height="340" alt="Subtracting base-model weights from fine-tuned weights gives a task vector; adding task vectors to the base combines weight changes." loading="lazy">
+                <img class="theme-image-dark" src="illustrations/task-arithmetic-dark.svg" width="500" height="340" alt="Subtracting base-model weights from fine-tuned weights gives a task vector; adding task vectors to the base combines weight changes." loading="lazy">
+              </div>
+              <h2 class="post-title">When Vision Models Add Up: Task Arithmetic Without Language Supervision</h2>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <span>© 2026 Adam Hazimeh</span>
+        <span>Lausanne, Switzerland</span>
+      </footer>
+    </div>
+  </body>
+</html>
